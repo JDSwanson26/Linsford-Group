@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Get Quote - Linsford Group</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index.html"><h1>Linsford Group</h1></a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="quote.html">Get Quote</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <h1>Get Your Free Quote</h1>
+    <p>Fast, Transparent Pricing in Minutes</p>
+  </div>
+
+  <!-- Main Content -->
+  <main class="content">
+
+    <section class="quote-page">
+      <div class="quote-page-container">
+        <div class="quote-form-section glass-effect">
+          <h2>Request a Freight Quote</h2>
+          <p class="form-intro">Fill out the form below and our team will provide you with a detailed quote within 24 hours.</p>
+          
+          <form class="quote-form" id="quoteForm">
+            <div class="form-grid">
+              <!-- Company Info -->
+              <div class="form-section">
+                <h3>Company Information</h3>
+                <div class="form-group">
+                  <label for="company">Company Name *</label>
+                  <input type="text" id="company" name="company" required>
+                </div>
+                <div class="form-group">
+                  <label for="contact-person">Contact Person *</label>
+                  <input type="text" id="contact-person" name="contact-person" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address *</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number *</label>
+                  <input type="tel" id="phone" name="phone" required>
+                </div>
+              </div>
+
+              <!-- Shipment Details -->
+              <div class="form-section">
+                <h3>Shipment Details</h3>
+                <div class="form-group">
+                  <label for="freight-type">Freight Type *</label>
+                  <select id="freight-type" name="freight-type" required>
+                    <option value="">Select Type</option>
+                    <option value="ocean">Ocean Freight (LCL/FCL)</option>
+                    <option value="air">Air Freight</option>
+                    <option value="ground">Ground Transport</option>
+                    <option value="multimodal">Multi-Modal Transport</option>
+                    <option value="consolidation">Consolidation Services</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="cargo-type">Cargo Type *</label>
+                  <select id="cargo-type" name="cargo-type" required>
+                    <option value="">Select Type</option>
+                    <option value="general">General Cargo</option>
+                    <option value="hazmat">Hazardous Materials</option>
+                    <option value="perishable">Perishable Goods</option>
+                    <option value="heavy">Heavy/Oversized</option>
+                    <option value="refrigerated">Refrigerated</option>
+                    <option value="fragile">Fragile/Breakable</option>
+                    <option value="automotive">Automotive Parts</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Origin & Destination -->
+              <div class="form-section">
+                <h3>Route Information</h3>
+                <div class="form-group">
+                  <label for="origin">Origin Country/Port *</label>
+                  <input type="text" id="origin" name="origin" placeholder="e.g., Shanghai, China" required>
+                </div>
+                <div class="form-group">
+                  <label for="origin-city">Origin City/Region</label>
+                  <input type="text" id="origin-city" name="origin-city">
+                </div>
+                <div class="form-group">
+                  <label for="destination">Destination Country/Port *</label>
+                  <input type="text" id="destination" name="destination" placeholder="e.g., London, UK" required>
+                </div>
+                <div class="form-group">
+                  <label for="destination-city">Destination City/Region</label>
+                  <input type="text" id="destination-city" name="destination-city">
+                </div>
+              </div>
+
+              <!-- Cargo Dimensions -->
+              <div class="form-section">
+                <h3>Cargo Specifications</h3>
+                <div class="form-group">
+                  <label for="weight">Approximate Weight (kg) *</label>
+                  <input type="number" id="weight" name="weight" min="1" required>
+                </div>
+                <div class="form-group">
+                  <label for="dimensions">Dimensions (L x W x H cm)</label>
+                  <input type="text" id="dimensions" name="dimensions" placeholder="e.g., 100 x 100 x 100">
+                </div>
+                <div class="form-group">
+                  <label for="cbm">Volume (CBM - Cubic Meters)</label>
+                  <input type="number" id="cbm" name="cbm" step="0.01">
+                </div>
+                <div class="form-group">
+                  <label for="pallets">Number of Pallets/Units</label>
+                  <input type="number" id="pallets" name="pallets" min="1">
+                </div>
+              </div>
+
+              <!-- Additional Options -->
+              <div class="form-section">
+                <h3>Additional Services</h3>
+                <div class="checkbox-group">
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="insurance" value="yes">
+                    Cargo Insurance
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="clearance" value="yes">
+                    Customs Clearance
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="delivery" value="yes">
+                    Door-to-Door Delivery
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="pickup" value="yes">
+                    Port Pickup Service
+                  </label>
+                </div>
+              </div>
+
+              <!-- Shipping Date & Details -->
+              <div class="form-section">
+                <h3>Timing & Requirements</h3>
+                <div class="form-group">
+                  <label for="pickup-date">Preferred Pickup Date *</label>
+                  <input type="date" id="pickup-date" name="pickup-date" required>
+                </div>
+                <div class="form-group">
+                  <label for="delivery-deadline">Delivery Deadline (if applicable)</label>
+                  <input type="date" id="delivery-deadline" name="delivery-deadline">
+                </div>
+              </div>
+
+              <!-- Special Requirements -->
+              <div class="form-section full-width">
+                <h3>Special Requirements</h3>
+                <div class="form-group full-width">
+                  <label for="details">Additional Details or Special Requirements</label>
+                  <textarea id="details" name="details" rows="5" placeholder="Any special handling, equipment needs, or other requirements?"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Request Quote</button>
+            <p class="form-note">* Required fields. We'll respond to your quote request within 24 business hours.</p>
+          </form>
+        </div>
+
+        <div class="quote-sidebar">
+          <div class="quote-info glass-effect">
+            <h3>Why Get a Quote?</h3>
+            <ul>
+              <li>✓ Compare pricing options</li>
+              <li>✓ Explore different routes</li>
+              <li>✓ Understand all fees upfront</li>
+              <li>✓ Plan your budget accurately</li>
+              <li>✓ No obligation to book</li>
+            </ul>
+          </div>
+
+          <div class="quote-features glass-effect">
+            <h3>Our Promise</h3>
+            <ul>
+              <li>✓ Instant calculations</li>
+              <li>✓ No hidden fees</li>
+              <li>✓ Competitive pricing</li>
+              <li>✓ Free consultation included</li>
+              <li>✓ Transparent breakdown</li>
+              <li>✓ Valid for 30 days</li>
+            </ul>
+          </div>
+
+          <div class="quote-cta glass-effect">
+            <h3>Need Help?</h3>
+            <p>Have questions about your shipment?</p>
+            <a href="contact.html" class="cta-button">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="section-header">
+        <h2>Frequently Asked Questions</h2>
+        <p>Common Questions About Our Quoting Process</p>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item glass-effect">
+          <h4>How long does it take to get a quote?</h4>
+          <p>Most quotes are provided within 2-4 hours for standard shipments. Complex shipments may take up to 24 hours.</p>
+        </div>
+        <div class="faq-item glass-effect">
+          <h4>What information do you need?</h4>
+          <p>We need details about your cargo (weight, dimensions), origin, destination, and preferred shipping method.</p>
+        </div>
+        <div class="faq-item glass-effect">
+          <h4>Is the quote binding?</h4>
+          <p>Our quotes are valid for 30 days and provide guidance on pricing. Final rates depend on market conditions and exact specifications.</p>
+        </div>
+        <div class="faq-item glass-effect">
+          <h4>Are all fees included?</h4>
+          <p>Yes, our quotes include all applicable charges: freight, handling, taxes, and any selected services. No hidden fees.</p>
+        </div>
+        <div class="faq-item glass-effect">
+          <h4>Can I get emergency shipping?</h4>
+          <p>Yes! We offer express and rush services. Contact our team directly for emergency shipping requirements.</p>
+        </div>
+        <div class="faq-item glass-effect">
+          <h4>What if my shipment is hazardous?</h4>
+          <p>We handle hazmat shipments with full compliance. Provide details in the "Special Requirements" section of the form.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Linsford Group</h4>
+        <p>Professional freight forwarding and logistics solutions worldwide.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="quote.html">Get Quote</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Ocean Freight</a></li>
+          <li><a href="services.html">Air Freight</a></li>
+          <li><a href="services.html">Ground Transport</a></li>
+          <li><a href="services.html">Warehousing</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <a href="#">LinkedIn</a>
+          <a href="#">Twitter</a>
+          <a href="#">Facebook</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Linsford Group. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('quoteForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for your quote request! Our team will contact you within 24 hours.');
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
